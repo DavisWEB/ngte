@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/gte-order/gte-order01",
+    "pages/gte-index/gte-index01",
+    "pages/gte-vip/gte-vip01",
+    "pages/gte-mine/gte-mine01",
+    "pages/gte-form/gte-form01"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FFF",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/gte-index/gte-index01",
+      "text": "首页",
+      "iconPath": "images/call_slices/首页.png",
+      "selectedIconPath": "images/index_slices/首页2.png"
+    },
+    {
+      "pagePath": "pages/gte-order/gte-order01",
+      "text": "点餐",
+      "iconPath": "images/index_slices/营养科 (2).png",
+      "selectedIconPath": "images/call_slices/营养科.png"
+    },{
+      "pagePath": "pages/gte-vip/gte-vip01",
+      "text": "会员",
+      "iconPath": "images/call_slices/皇冠 (1).png",
+      "selectedIconPath": "images/vip_slices/皇冠.png"
+    },
+    {
+      "pagePath": "pages/gte-form/gte-form01",
+      "text": "订单",
+      "iconPath": "images/order_slices/订单 (1).png",
+      "selectedIconPath": "images/order_slices/订单.png"
+    },
+    {
+      "pagePath": "pages/gte-mine/gte-mine01",
+      "text": "我的",
+      "iconPath": "images/call_slices/我的 (1).png",
+      "selectedIconPath": "images/mine_slices/我的.png"
+    }]
+  }
+}

@@ -1,0 +1,17 @@
+<!--pages/gte-order/gte-order01.wxml-->
+<text class="title">福威文聪JUMP的店铺</text>
+<image src='../../images/call_slices/arrow.png' class="arrow"></image>
+<view class="way">距离您7.0km</view>
+<view class="middle">
+  <view id="pros">
+    <view wx:for="{{pros}}" wx:key="index" class="{{chose==index?'chose':''}}" bindtap='change' data-vid="{{index}}">{{item}}</view>
+  </view>
+  <view id="pro"></view>
+</view>
+<view class="bag" hidden='{{pros.lengt>=0}}'>
+  <image src='../../images/call_slices/购买.png'  class="shopbag"></image>
+  <text>购物袋</text>
+  <text class="num">5</text>
+  <text>count</text>
+  <text class="gopay">去结算</text>
+</view>
