@@ -6,13 +6,25 @@ Page({
    */
   data: {
     pros:["咖啡","沙拉","营养餐","奶昔","欧包","人气热卖"],
-    chose:0
+    chose:0,
+    pick:true,
   },
   change:function(e){
    var vid=e.target.dataset.vid
    this.setData({
      chose:vid
    })
+  },
+  pick:function(){
+    if(this.data.pick===true){
+      this.setData({
+        pick:false
+      })
+    }else{
+      this.setData({
+        pick: true
+      })
+    }
   },
   
   /**

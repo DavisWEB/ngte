@@ -5,6 +5,15 @@ text.title{
   font-size: 36rpx;
   color:rgba(0, 0, 0, 0.699)
 }
+ #title{
+  position: fixed;
+  z-index: 999;
+  height:10%;
+  background-color:#fff;
+  width: 100%;
+  top:0;
+  left:0;
+} 
 view.way{
   color:rgba(170, 175, 174, 0.829);
   margin-left: 20rpx;
@@ -15,8 +24,12 @@ image.arrow{
   height:30rpx;
 }
 #pros{
-  margin-top:30rpx;
+  margin-top:0rpx;
+  padding-top:30rpx;
   width:220rpx;
+  
+  float: left;
+  position: fixed;
 }
 #pros>view{
   font-size: 28rpx;
@@ -42,12 +55,12 @@ view.bag{
   left:50rpx;
   transform: translate(0,-50%)
 }
-.bag>text:nth-child(2){
+.smbag{
   font-size:28rpx;
   display: inline-block;
   margin-left: 100rpx;
 }
-.bag>text.num{
+text.num{
   margin-left:10rpx;
   border-radius: 50%;
   color:#fff;
@@ -62,10 +75,13 @@ view.bag{
   line-height: 40rpx;
   font-size: 23rpx;
 }
-.bag>text:nth-child(4){
+.count{
   margin-left: 230rpx;
 }
-.bag>text:nth-child(5){
+.block{
+  float: left
+}
+.gopay{
   position: absolute;
   right:0;
   background-color:rgb(34, 187, 141);
@@ -80,4 +96,34 @@ view.bag{
   border-left: 10rpx solid rgb(34, 187, 141);
   color:rgb(34, 187, 141);
   box-sizing: border-box;
+}
+view.middle{
+  position:relative;
+  margin-top:15%;
+
+}
+#pro{
+  width:70%;
+  margin-top:10%;
+  background-color:yellow;
+  margin-left:29.5%;
+}
+
+/* 可显性购物袋 */
+#shopbag{
+  height:100%;
+  width:100%;
+  background-color:transparent;
+  position: fixed;
+  bottom:8.2%;
+}
+.pick{
+  background-color:rgba(238, 238, 238, 0.979);
+  height:60%;
+  
+}
+.close{
+  background-color:transparent;
+  height:40%;
+  
 }

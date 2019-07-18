@@ -1,17 +1,35 @@
 <!--pages/gte-order/gte-order01.wxml-->
-<text class="title">福威文聪JUMP的店铺</text>
-<image src='../../images/call_slices/arrow.png' class="arrow"></image>
-<view class="way">距离您7.0km</view>
+<view id="title">
+  <text class="title">福威文聪JUMP的店铺</text>
+  <image src='../../images/call_slices/arrow.png' class="arrow"></image>
+  <view class="way">距离您7.0km</view>
+</view>
+
 <view class="middle">
   <view id="pros">
     <view wx:for="{{pros}}" wx:key="index" class="{{chose==index?'chose':''}}" bindtap='change' data-vid="{{index}}">{{item}}</view>
   </view>
-  <view id="pro"></view>
+  <!-- 中间可滚动视窗 -->
+  <scroll-view id="pro" scroll-y='true' style="height:1500rpx">
+    <!-- 内部菜品  -->
+    <view style="background: red; width: 100rpx; height: 300rpx" ></view>
+    <view style="background: green; width: 100rpx; height: 300rpx"></view>
+    <view style="background: blue; width: 100rpx; height: 300rpx"></view>
+    <view style="background: yellow; width: 100rpx; height: 300rpx"></view>
+
+  </scroll-view>
 </view>
+<!-- 底部结算栏 -->
 <view class="bag" hidden='{{pros.lengt>=0}}'>
-  <image src='../../images/call_slices/购买.png'  class="shopbag"></image>
-  <text>购物袋</text>
-  <text class="num">5</text>
-  <text>count</text>
+  <view class='block' bindtap="pick">
+    <image src='../../images/call_slices/购买.png'  class="shopbag"></image>
+    <text class="smbag">购物袋</text>
+    <text class="num">5</text>
+  </view>
+  <text class="count">count</text>
   <text class="gopay">去结算</text>
+</view>
+<view id="shopbag" hidden="{{pick===true}}">
+  <view class="close" bindtap="pick"></view>
+  <view class='pick'></view>
 </view>
