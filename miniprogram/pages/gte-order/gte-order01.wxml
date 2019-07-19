@@ -9,15 +9,15 @@
   <view id="pros">
     <view wx:for="{{pros}}" wx:key="index" class="{{chose==index?'chose':''}}" bindtap='change' data-vid="{{index}}">{{item}}</view>
   </view>
-  <!-- 中间可滚动视窗 -->
-  <scroll-view id="pro" scroll-y='true' style="height:1500rpx">
-    <!-- 内部菜品  -->
-    <view style="background: red; width: 100rpx; height: 300rpx" ></view>
-    <view style="background: green; width: 100rpx; height: 300rpx"></view>
-    <view style="background: blue; width: 100rpx; height: 300rpx"></view>
-    <view style="background: yellow; width: 100rpx; height: 300rpx"></view>
 
-  </scroll-view>
+<!--垂直滚动，这里必须设置高度-->
+<scroll-view id="pro" scroll-y="true" style="height: 900rpx">
+    <view style="background: red; width: 100px; height: 300rpx" ></view>
+    <view style="background: green; width: 100px; height: 300rpx"></view>
+    <view style="background: blue; width: 100px; height: 300rpx"></view>
+    <view style="background: yellow; width: 100px; height: 300rpx"></view>
+</scroll-view>
+
 </view>
 <!-- 底部结算栏 -->
 <view class="bag" hidden='{{pros.lengt>=0}}'>
