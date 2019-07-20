@@ -1,0 +1,69 @@
+/* pages/gte-vip-w/gte-vip-w.wxss */
+.vip{
+  background: #000;
+  width: 750rpx;height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.vip-img{
+  width: 50rpx;height: 50rpx;
+  margin-right: 30rpx;
+  margin-top: 5rpx;
+}
+.vip-left-title{
+  color:#fff;
+  margin-left: 10rpx;
+}
+.vip-right-title{
+  color:rgb(182, 140, 56);
+  font-size: 28rpx;
+  margin-right: 10rpx;
+}
+.vip-left-o{
+  display: inline-block;
+  width: 40rpx;height: 40rpx;
+  border-radius: 50%;
+  background: #fff;
+  margin-left: 30rpx;
+}
+.vip-right{
+  display: flex;
+  align-items: center;
+}
+.vip-left{
+  display: flex;
+  align-items: center;
+}
+.vip-w{
+  background: #000;
+ 
+  height: 308rpx;
+}
+.vip-w-img{
+  width: 700rpx;
+  height: 320rpx;
+  margin-left: 25rpx;
+}
+.vip-w-t{
+  text-align:center;
+   margin-top: 30rpx;
+}
+.vip-w-title{
+  font-size: 35rpx;
+}
+.vip-w-c{
+  display: flex;
+  flex-direction: column;
+}
+.vip-w-c text{
+  margin-top: 50rpx;
+  margin-left: 85rpx;
+  font-size: 30rpx;
+}
+.vip-w-btn button{
+  width: 750rpx;
+  background:rgb(182, 140, 56);
+  color: #fff;
+  margin-top: 70rpx;
+}

@@ -1,0 +1,33 @@
+<!--pages/gte-vip-w/gte-vip-w.wxml-->
+<view class="vip">
+  <view class="vip-left">
+    <text class="vip-left-o"></text>
+    <text class="vip-left-title">BENBENBEN</text>
+  </view>
+  <view class="vip-right">
+    <text class="vip-right-title">纤善时尚会员说明</text>
+    <image src="../../images/vip_slices/01.png" class="vip-img"></image>
+  </view>
+</view>
+
+<view class="vip-w">
+  <image src="../../images/vip_slices/b.png" class="vip-w-img"></image>
+</view>
+
+<view class="vip-w-t">
+  <text class="vip-w-title">我的特权</text>
+</view>
+
+<view class="vip-w-c">
+  <text>九十份定制餐</text>
+  <text>品牌旗下课程无限上</text>
+  <text>赠送七节私教课程</text>
+  <text>每日体侧数据单</text>
+  <text>免配送费</text>
+  <text>选择厨师</text>
+  <text>自主选择送餐员</text>
+</view>
+
+<view class="vip-w-btn">
+  <button>会员续费</button>
+</view>
