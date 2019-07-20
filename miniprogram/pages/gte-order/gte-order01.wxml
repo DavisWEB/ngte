@@ -1,17 +1,57 @@
 <!--pages/gte-order/gte-order01.wxml-->
-<text class="title">福威文聪JUMP的店铺</text>
-<image src='../../images/call_slices/arrow.png' class="arrow"></image>
-<view class="way">距离您7.0km</view>
-<view class="middle">
-  <view id="pros">
-    <view wx:for="{{pros}}" wx:key="index" class="{{chose==index?'chose':''}}" bindtap='change' data-vid="{{index}}">{{item}}</view>
-  </view>
-  <view id="pro"></view>
+<view id="outside" style="margin:0;padding:0;height:100%;position:absolut;">
+<view id="title">
+  <text class="title">福威文聪JUMP的店铺</text>
+  <image src='../../images/call_slices/arrow.png' class="arrow"></image>
+  <view class="way">距离您7.0km</view>
 </view>
-<view class="bag" hidden='{{pros.lengt>=0}}'>
-  <image src='../../images/call_slices/购买.png'  class="shopbag"></image>
-  <text>购物袋</text>
-  <text class="num">5</text>
-  <text>count</text>
+
+<view class="middle" id="middle">
+<!-- 侧部菜单栏 -->
+  <view id="pros">
+    <view wx:for="{{pros}}" wx:key="index" class="{{chose==item.vid?'chose':''}}" bindtap='change' data-vid="{{item.vid}}">{{item.name}}</view>
+  </view>
+
+<!--垂直滚动，这里必须设置高度-->
+<scroll-view id="pro" scroll-y="true" style="height:{{height}}px;" bindscroll="onPageScroll">
+    <view class="things" wx:for="{{things}}" wx:key="i" id="{{item.id}}">
+        <view class="vitem" wx:for="{{item.thing}}" wx:key="j">
+            <image class="v-img"></image>
+            <view class="details">
+              <text>{{item.name}}</text>
+              <text>{{item.price}}</text>
+            </view>
+            <view class="txts" >
+              <view class="txt down" data-ctr="1"  data-name="{{item.name}}" data-id="{{item.id}}" data-price="{{item.price}}" bindtap="qtyCtrlup">+</view>
+            </view>
+        </view>
+    </view>
+</scroll-view>
+
+</view>
+<!-- 底部结算栏 -->
+<view class="bag" hidden='{{shopbag.length==0}}' id="bot">
+  <view class='block' bindtap="pick">
+    <image src='../../images/call_slices/购买.png'  class="shopbag"></image>
+    <text class="smbag">购物袋</text>
+    <text class="num">{{shopbag.length}}</text>
+  </view>
+  <text class="count">¥{{count}}</text>
   <text class="gopay">去结算</text>
+</view>
+<!-- 购物袋内容物 -->
+<view id="shopbag" hidden="{{pick===true||shopbag.length==0}}">
+  <view class="close" bindtap="pick"></view>
+  <view class='pick'>
+    <view wx:for="{{shopbag}}" wx:key="index" class="mybag">
+      <view>{{item.name}}</view>
+      <view>price</view>
+      <view>
+      <text class="down smarrow" data-ctr="-1"  data-name="{{item.name}}" data-id="{{item.id}}" data-price="{{item.price}}" bindtap="qtyCtrldown">-</text>
+      <text class="smarrow num2">{{item.qty}}</text>
+      <text class="up smarrow" data-ctr="1"  data-name="{{item.name}}" data-id="{{item.id}}" data-price="{{item.price}}" bindtap="qtyCtrlup">+</text>
+      </view>
+    </view>
+  </view>
+</view>
 </view>
