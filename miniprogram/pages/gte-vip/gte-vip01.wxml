@@ -1,2 +1,61 @@
 <!--pages/gte-vip/gte-vip01.wxml-->
-<text>pages/gte-vip/gte-vip01.wxml</text>
+<view class="vip">
+  <view class="vip-left">
+    <text class="vip-left-o"></text>
+    <text class="vip-left-title">BENBENBEN</text>
+  </view>
+  <view class="vip-right">
+    <text class="vip-right-title">纤善时尚会员说明</text>
+    <image src="../../images/vip_slices/01.png" class="vip-img"></image>
+  </view>
+</view>
+
+<view class="vip-center">
+  <text class="vip-center-title">会员特权</text>
+</view>
+
+<view class="vip-bottom">
+  <view class="vip-bottom-flex">
+  <image src='../../images/vip_slices/03.png'></image>
+  <view class="title">九十份定制餐</view>
+  </view>
+
+  <view class="vip-bottom-flex">
+  <image src='../../images/vip_slices/04.png'></image>
+  <view class="title">免费品牌课程</view>
+  </view>
+
+  <view class="vip-bottom-flex">
+  <image src='../../images/vip_slices/05.png'></image>
+  <view class="title">七节私教课</view>
+  </view>
+
+  <view class="vip-bottom-flex">
+  <image src='../../images/vip_slices/06.png'></image>
+  <view class="title">体测数据单</view>
+  </view>
+
+  <view class="vip-bottom-flex">
+  <image src='../../images/vip_slices/08.png'></image>
+  <view class="title">健康月卡</view>
+  </view>
+
+  <view class="vip-bottom-flex">
+  <image src='../../images/vip_slices/03.png'></image>
+  <view class="title">免费送费</view>
+  </view>
+
+  <view class="vip-bottom-flex">
+  <image src='../../images/vip_slices/07.png'></image>
+  <view class="title">自选厨师</view>
+  </view>
+
+  <view class="vip-bottom-flex">
+  <image src='../../images/vip_slices/02.png'></image>
+  <view class="title">自选送餐员</view>
+  </view>
+</view>
+
+<view class="vip-btn">
+  <button bindtap='pay'>立即开通</button>
+</view>

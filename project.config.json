@@ -6,7 +6,10 @@
 		"es6": true,
 		"postcss": true,
 		"minified": true,
-		"newFeature": true
+		"newFeature": true,
+		"nodeModules": true,
+		"autoAudits": false,
+		"checkInvalidKey": true
 	},
 	"appid": "wxe43d16c7dbe392a3",
 	"projectname": "gte",

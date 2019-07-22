@@ -1,0 +1,45 @@
+<!--pages/gtevip-pay/gte-vip-pay.wxml-->
+<view class="vip-pay">
+  <text>{{list[n]}}</text>
+</view>
+
+<view class="vip-pay-top">
+  <van-tabs type="card" color="rgb(10, 160, 115)" bind:click="bpay">
+  <van-tab title="白金会员">
+    <view class="vip-pay-c">
+      <view class='top'>
+        <text>白金会员特权</text>
+        <text class="right">会员说明</text>
+      </view>
+      <text>九十份定制餐</text>
+      <text>任选七节课程</text>
+      <text>每月体侧数据单</text>
+      <text>免配送费</text>
+      <text>选择厨师</text>
+      <text>自主选择送餐员</text>
+    </view>
+  </van-tab>
+  <van-tab title="黑金会员">
+    <view class="vip-pay-c">
+      <view  class='top'>
+        <text>黑金会员特权</text>
+        <text class="right">会员说明</text>
+      </view>
+      <text>营养定制餐</text>
+      <text>优先进行配送</text>
+      <text>每月体侧数据单</text>
+      <text>免配送费</text>
+      <text>赠送会员专享</text>
+      <text>套餐优惠多多</text>
+    </view>
+  </van-tab>
+</van-tabs>
+</view>
+
+<view class="vip-pay-btn">
+  <button>立即支付</button>
+</view>
+
+
+
+

@@ -7,7 +7,11 @@ Page({
   data: {
 
   },
-
+  pay:function(){
+    wx.navigateTo({
+      url: '../gte-vip-pay/gte-vip-pay',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

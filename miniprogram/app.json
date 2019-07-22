@@ -1,9 +1,12 @@
 {
   "pages": [
+    "pages/gte-vip/gte-vip01",
+    "pages/gte-vip-pay/gte-vip-pay",
+    "pages/gte-vip-b/gte-vip-b",
+    "pages/gte-vip-w/gte-vip-w",
+    "pages/gte-mine/gte-mine01",
     "pages/gte-order/gte-order01",
     "pages/gte-index/gte-index01",
-    "pages/gte-vip/gte-vip01",
-    "pages/gte-mine/gte-mine01",
     "pages/gte-form/gte-form01"
   ],
   "window": {

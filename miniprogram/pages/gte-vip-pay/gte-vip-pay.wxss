@@ -1,0 +1,47 @@
+/* pages/gtevip-pay/gte-vip-pay.wxss */
+.vip-pay{
+  text-align: center;
+}
+.vip-pay text{
+  color: rgb(10, 160, 115);
+}
+.vip-pay-c{
+  display: flex;
+  flex-direction: column;
+}
+.vip-pay-c text{
+  margin-top: 50rpx;
+  margin-left: 85rpx;
+  font-size: 30rpx;
+}
+.vip-pay-btn{
+  margin-top: 95rpx;
+}
+.vip-pay-btn button{
+  width: 630rpx;height: 100rpx;
+  background: rgb(10, 160, 115);
+  color: #fff;
+  border-radius: 50rpx; 
+}
+.vip-pay-top{
+  margin-top: 50rpx;
+}
+.top{
+  margin-top: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  margin-left: -40rpx;
+  margin-right: 100rpx;
+}
+.right{
+  color: rgb(10, 160, 115);
+  font-size: 10rpx;
+}
+
+/* .van-ellipsis{
+border-top-left-radius: 150rpx;
+border-bottom-left-radius: 150rpx;
+border-top-right-radius: 150rpx;
+border-bottom-right-radius: 150rpx;
+} */
+
