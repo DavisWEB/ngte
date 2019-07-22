@@ -120,10 +120,11 @@ view.middle{
 
 }
 .pick{
-  background-color:rgba(238, 238, 238, 0.979);
+  background-color:rgb(238, 238, 238);
   height:60%;
   padding:20rpx;
   box-sizing: border-box;
+  overflow: hidden;
 }
 .close{
   background-color:transparent;

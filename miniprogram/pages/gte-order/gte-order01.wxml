@@ -13,8 +13,8 @@
   </view>
 
 <!--垂直滚动，这里必须设置高度-->
-<scroll-view id="pro" scroll-y="true" style="height:{{height}}px;" bindscroll="onPageScroll">
-    <view class="things" wx:for="{{things}}" wx:key="i" id="{{item.id}}">
+<scroll-view id="pro" scroll-y="true" style="height:{{height}}px;" bindscroll="onscroll" scroll-into-view="{{intoview}}" scroll-with-animation="true">
+    <view class="things" wx:for="{{things}}" wx:key="i" id="v{{item.vid}}">
         <view class="vitem" wx:for="{{item.thing}}" wx:key="j">
             <image class="v-img"></image>
             <view class="details">
@@ -27,8 +27,8 @@
         </view>
     </view>
 </scroll-view>
-
 </view>
+
 <!-- 底部结算栏 -->
 <view class="bag" hidden='{{shopbag.length==0}}' id="bot">
   <view class='block' bindtap="pick">
@@ -40,18 +40,18 @@
   <text class="gopay">去结算</text>
 </view>
 <!-- 购物袋内容物 -->
-<view id="shopbag" hidden="{{pick===true||shopbag.length==0}}">
+<view id="shopbag" hidden="{{pick===true||shopbag.length==0}}"  >
   <view class="close" bindtap="pick"></view>
-  <view class='pick'>
+  <scroll-view class='pick' scroll-y="true" >
     <view wx:for="{{shopbag}}" wx:key="index" class="mybag">
       <view>{{item.name}}</view>
-      <view>price</view>
+      <view>¥{{item.price}}</view>
       <view>
       <text class="down smarrow" data-ctr="-1"  data-name="{{item.name}}" data-id="{{item.id}}" data-price="{{item.price}}" bindtap="qtyCtrldown">-</text>
       <text class="smarrow num2">{{item.qty}}</text>
       <text class="up smarrow" data-ctr="1"  data-name="{{item.name}}" data-id="{{item.id}}" data-price="{{item.price}}" bindtap="qtyCtrlup">+</text>
       </view>
     </view>
-  </view>
+  </scroll-view>
 </view>
 </view>
