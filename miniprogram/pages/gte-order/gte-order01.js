@@ -128,7 +128,6 @@ Page({
 //  去结算
  goPay(){
    wx.switchTab({
-     
      url: '/pages/gte-form/gte-form01',
    })
 
@@ -192,7 +191,6 @@ Page({
  },
  
   showPros(){
-  
       db.collection("pros").get().then(res => {
         console.log(res.data)
         this.setData({
@@ -200,24 +198,52 @@ Page({
         })
       })
   },
+
+  // promise函数
+  one:function(){
+    return new Promise((res,err)=>{
+      this.showPros()
+      console.log(1)
+      res()
+    })
+  },
+  two:function(){
+    return new Promise((res,err)=>{
+      this.getHeight();
+      console.log(2)
+      res()
+    })
+  },
+  three:function(){
+    return new Promise((res,err)=>{
+      setTimeout(()=>{
+        this.query()
+        console.log(3)
+      },500)
+     
+      res()
+    })
+  },
+
    /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-      new Promise(open=>{
-        this.showPros()
-        console.log(1)
-        open()
-      }).then(res=>{
-        this.getHeight();
-        console.log(2)
-      }).then(res=>{
-        setTimeout(()=>{
-          this.query() 
-        console.log(3)
-        },2000)
+    this.one().then(this.two).then(this.three)
+      // new Promise(open=>{
+      //   this.showPros()
+      //   console.log(1)
+      //   open()
+      // }).then(res=>{
+      //   this.getHeight();
+      //   console.log(2)
+      // }).then(res=>{
+      //   setTimeout(()=>{
+      //     this.query() 
+      //   console.log(3)
+      //   },2000)
         
-      })
+      // })
   },
 
   /**
