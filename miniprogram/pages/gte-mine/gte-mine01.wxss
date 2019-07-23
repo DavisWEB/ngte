@@ -1,1 +1,71 @@
 /* pages/gte-mine/gte-mine01.wxss */
+.Images{width:290rpx;height: 150rpx;float: left;
+}
+.Images>image{
+  width: 150rpx;
+  height: 150rpx;
+  margin-left: 150rpx;
+}
+.Size{
+  width: 400rpx;
+  height: 150rpx;
+  float: left; 
+  text-align: center;
+  line-height: 170rpx;
+  font-size:40rpx; 
+  margin-left: 10rpx;
+}
+.login1{
+  clear: both;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.cm{
+  width: 150rpx;
+  height: 100rpx;
+  float: left;
+  text-align: center;
+}
+.kg, .bai, .cm1{
+  font-size:20rpx; 
+}
+/*分割线样式*/
+.divLine{
+ background: #E0E3DA;
+ width: 100%;
+ height: 15rpx;
+ margin-top:50rpx; 
+}
+.mu1{
+  margin-top:20rpx; 
+  overflow: hidden;
+  padding: 20rpx;
+}
+.Images_1>image{
+  width: 38rpx;
+  height: 40rpx;
+}
+.Images_1{
+width: 40rpx;
+height: 40rpx;
+float: left;
+}
+.Size_my{
+  font-size:25rpx; 
+  width: 200rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  float: left;
+}
+.Images_2{
+  width: 40rpx;
+  height: 40rpx;
+  float: right;
+}
+.My_money{
+  position: absolute;
+  right: 66rpx;
+  margin-top: -2rpx;
+  color: #0ba862;
+  font-size: 30rpx;
+}

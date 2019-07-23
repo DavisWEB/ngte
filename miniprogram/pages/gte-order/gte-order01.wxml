@@ -14,15 +14,15 @@
 
 <!--垂直滚动，这里必须设置高度-->
 <scroll-view id="pro" scroll-y="true" style="height:{{height}}px;" bindscroll="onscroll" scroll-into-view="{{intoview}}" scroll-with-animation="true">
-    <view class="things" wx:for="{{things}}" wx:key="i" id="v{{item.vid}}">
-        <view class="vitem" wx:for="{{item.thing}}" wx:key="j">
-            <image class="v-img"></image>
+    <view class="things" wx:for="{{pros}}" wx:key="i" id="v{{item.vid}}">
+        <view class="vitem" wx:for="{{item.things}}" wx:key="j">
+            <image class="v-img" src="{{item._fid}}"></image>
             <view class="details">
-              <text>{{item.name}}</text>
-              <text>{{item.price}}</text>
+              <view>{{item.name}}</view>
+              <view>¥{{item.price}}</view>
             </view>
             <view class="txts" >
-              <view class="txt down" data-ctr="1"  data-name="{{item.name}}" data-id="{{item.id}}" data-price="{{item.price}}" bindtap="qtyCtrlup">+</view>
+              <view class="txt down jump" data-ctr="1"  data-name="{{item.name}}" data-name="{{item.name}}" data-price="{{item.price}}" bindtap="qtyCtrlup">+</view>
             </view>
         </view>
     </view>
@@ -37,8 +37,9 @@
     <text class="num">{{shopbag.length}}</text>
   </view>
   <text class="count">¥{{count}}</text>
-  <text class="gopay">去结算</text>
+  <text class="gopay" bindtap="goPay">去结算</text>
 </view>
+
 <!-- 购物袋内容物 -->
 <view id="shopbag" hidden="{{pick===true||shopbag.length==0}}"  >
   <view class="close" bindtap="pick"></view>
@@ -47,9 +48,9 @@
       <view>{{item.name}}</view>
       <view>¥{{item.price}}</view>
       <view>
-      <text class="down smarrow" data-ctr="-1"  data-name="{{item.name}}" data-id="{{item.id}}" data-price="{{item.price}}" bindtap="qtyCtrldown">-</text>
-      <text class="smarrow num2">{{item.qty}}</text>
-      <text class="up smarrow" data-ctr="1"  data-name="{{item.name}}" data-id="{{item.id}}" data-price="{{item.price}}" bindtap="qtyCtrlup">+</text>
+      <text class="down smarrow jump" data-ctr="-1"  data-name="{{item.name}}" data-id="{{item.id}}" data-price="{{item.price}}" bindtap="qtyCtrldown">-</text>
+      <text class="smarrow num2 jump">{{item.qty}}</text>
+      <text class="up smarrow jump" data-ctr="1"  data-name="{{item.name}}" data-id="{{item.id}}" data-price="{{item.price}}" bindtap="qtyCtrlup">+</text>
       </view>
     </view>
   </scroll-view>

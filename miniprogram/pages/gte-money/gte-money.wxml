@@ -1,0 +1,23 @@
+<!--pages/gte-money/gte-money.wxml-->
+<view class='Muu'>
+  <view class="Money">￥2700.00</view>
+  <view class=" balance">我的余额</view>
+</view>
+<view class='liat'>
+   <view class='Consumer_i'>
+     <view class='Consumer_v'>点餐消费</view>
+     <view class='Date'>2019-10-11  13:00:00</view>
+   </view>
+   <view class='Consumer'>
+     <text>-10.00</text>
+   </view>
+</view>
+<view class='liat'>
+   <view class='Consumer_i'>
+     <view class='Consumer_v'>会员充值</view>
+     <view class='Date'>2019-10-11  13:00:00</view>
+   </view>
+   <view class='VIP'>
+     <text>+10.00</text>
+   </view>
+</view>

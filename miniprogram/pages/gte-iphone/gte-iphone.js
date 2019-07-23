@@ -1,4 +1,4 @@
-// pages/gte-mine/gte-mine01.js
+// pages/gte-iphone/gte-iphone.js
 Page({
 
   /**
@@ -7,16 +7,7 @@ Page({
   data: {
 
   },
-  mloney: function () {
-    wx.navigateTo({
-      url: '../gte-money/gte-money',
-    })
-  },
-  phone: function () {
-    wx.navigateTo({
-      url: '../gte-iphone/gte-iphone'
-    })
-  },
+
   /**
    * 生命周期函数--监听页面加载
    */

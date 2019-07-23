@@ -1,0 +1,19 @@
+/* pages/gte-iphone/gte-iphone.wxss */
+/*分割线样式*/
+.divLine{
+  margin-top:50rpx; 
+ background: rgb(234, 236, 228);
+ width: 100%;
+ height: 20rpx;
+}
+.yes{
+  width: 500rpx;
+  height:90rpx;
+  color: rgb(250, 244, 244);
+  background:#0ba862;
+  text-align: center;
+  line-height: 90rpx;
+  border-radius: 50rpx;
+  margin: 0 auto;
+  margin-top:30rpx; 
+}

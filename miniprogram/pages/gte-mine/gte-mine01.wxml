@@ -1,2 +1,67 @@
 <!--pages/gte-mine/gte-mine01.wxml-->
-<text>pages/gte-mine/gte-mine01.wxml</text>
+<view class='login'>
+   <view class='Size'>点击显示头像昵称</view>
+   <view class='Images'>
+   <image src="../../images/mine_slices/插入.png"/>
+   </view>
+</view>
+<view class='login1'>
+  <view>
+     <view class='cm'>
+       <input type='text' placeholder='未知' maxlength="3"></input>
+       <view class='cm1'>身高/cm</view>
+     </view>
+     <view class='cm'>
+       <input type='text' placeholder='未知' maxlength="3"></input>
+       <view class='kg'>体重/Kg</view>
+     </view>
+     <view class='cm'>
+       <input type='text' placeholder='未知' maxlength="3"></input>
+       <view class='bai'>体脂率/%</view>
+     </view>
+  </view>
+</view>
+<view class="container">
+     <!-- 分割线 -->
+  <view class="divLine"></view>
+</view>
+<view>
+    <view class="mu1" bindtap='mloney'>
+      <view class="Images_1">
+        <image src="../../images/mine_slices/付费.png"/>
+      </view>
+       <view class='Size_my'>我的钱包</view>
+          <view class='My_money'>￥2000.00</view>
+        <view>
+           <image src='../../images/mine_slices/enter.png' class='Images_2'></image>
+        </view>
+  </view>
+    <view class="mu1">
+        <view class="Images_1">
+        <image src="../../images/mine_slices/皇冠.png"/>
+    </view>
+      <view class='Size_my'>会员中心</view>
+           <view>
+           <image src='../../images/mine_slices/enter.png' class='Images_2'></image>
+        </view>
+  </view>
+  <view class="mu1" bindtap='phone'>
+    <view class="Images_1">
+      <image src="../../images/mine_slices/电话.png"/>
+    </view>
+      <view class='Size_my'>绑定手机号码</view>
+      <view class='My_money'>未绑定</view>
+        <view>
+           <image src='../../images/mine_slices/enter.png' class='Images_2'></image>
+        </view>
+  </view>
+  <view class="mu1">
+    <view class="Images_1">
+      <image src="../../images/mine_slices/客服.png"/>
+    </view>
+      <view class='Size_my'>联系客服</view>
+        <view>
+           <image src='../../images/mine_slices/enter.png' class='Images_2'></image>
+        </view>
+  </view>
+</view>

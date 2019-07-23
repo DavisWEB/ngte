@@ -1,0 +1,37 @@
+/* pages/gte-money/gte-money.wxss */
+.Money{
+  text-align: center;
+  font-size: 70rpx;
+  color: #0ba862;
+  margin-top:20rpx; 
+}
+.balance{
+  font-size: 30rpx;
+  text-align: center;
+  margin-top: 20rpx;
+}
+.Muu{
+  border-bottom: 15rpx solid gainsboro;
+  height: 200rpx;
+}
+.Consumer{
+  color: red;
+}
+
+.Consumer_v{
+  font-size: 33rpx;
+}
+.Date{
+  color: gray;
+  font-size: 25rpx;
+  margin-top: 17rpx;
+}
+.liat{
+  display: flex;
+  justify-content:space-between;
+  padding: 40rpx;
+  border-bottom: 1rpx solid gray;
+}
+.VIP{
+  color: #0ba862;
+}/* pages/gte-money/gte-money.wxss */

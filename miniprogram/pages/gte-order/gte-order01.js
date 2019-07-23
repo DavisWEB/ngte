@@ -1,101 +1,18 @@
 // pages/gte-order/gte-order01.js
+const db = wx.cloud.database();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    pros: [{ vid: '01', name: "人气热卖" }, { vid: '02', name: "咖啡" }, { vid: '03', name: "沙拉" }, { vid: '04', name: "营养果餐" }, { vid: '05', name: "奶昔" }, { vid: '06', name: "欧包" }, { vid: '07', name: "便当" }],
+    pros: [],
     chose:'01',
     intoview:"v01",
     count:0,
     pick:true,
     height:null,
-    things:[
-      {
-        vid: "01", name:"人气热卖",thing:[
-        { id:"0101",  name: "卤肉饭", price: 15.0},
-        { id: "0102", name: "卤肉饭", price: 13.0},
-        { id: "0103", name: "鸡肉饭", price: 13.5 },
-        { id: "0104", name: "牛肉饭", price: 15.0 },
-        { id: "0105", name: "鸭肉饭", price: 9.0},
-        { id: "0106", name: "青蛙饭", price: 11.0},
-        { id: "0107", name: "鸽子饭", price: 21.5},
-        { id: "0108", name: "煲仔饭", price: 16.0},
-      ]},
-      {
-        vid: "02", name: "咖啡", thing: [
-          { id: "0101", name: "去去去", price: 15.0 },
-          { id: "0102", name: "滚滚滚", price: 13.0 },
-          { id: "0103", name: "哈哈", price: 13.5 },
-          { id: "0104", name: "牛肉饭", price: 15.0 },
-          { id: "0105", name: "鸭肉饭", price: 9.0 },
-          { id: "0106", name: "青蛙饭", price: 11.0 },
-          { id: "0107", name: "鸽子饭", price: 21.5 },
-          { id: "0108", name: "煲仔饭", price: 16.0 },
-        ]
-      },
-      {
-        vid: "03", name: "沙拉", thing: [
-          { id: "0101", name: "一i", price: 15.0 },
-          { id: "0102", name: "营养", price: 13.0 },
-          { id: "0103", name: "鸡肉买买买饭", price: 13.5 },
-          { id: "0104", name: "牛肉饭", price: 15.0 },
-          { id: "0105", name: "鸭肉饭", price: 9.0 },
-          { id: "0106", name: "青蛙饭", price: 11.0 },
-          { id: "0107", name: "鸽子饭", price: 21.5 },
-          { id: "0108", name: "煲仔饭", price: 16.0 },
-        ]
-      },
-      {
-        vid: "04", name: "营养果餐", thing: [
-          { id: "0101", name: "咖啡", price: 15.0 },
-          { id: "0102", name: "可乐", price: 13.0 },
-          { id: "0103", name: "鸡肉饭", price: 13.5 },
-          { id: "0104", name: "哈哈", price: 15.0 },
-          { id: "0105", name: "鸡翅", price: 9.0 },
-          { id: "0106", name: "青蛙饭", price: 11.0 },
-          { id: "0107", name: "鸽子饭", price: 21.5 },
-          { id: "0108", name: "煲仔饭", price: 16.0 },
-        ]
-      },
-      {
-        vid: "05", name: "奶昔", thing: [
-          { id: "0101", name: "问问", price: 15.0 },
-          { id: "0102", name: "是不", price: 13.0 },
-          { id: "0103", name: "的", price: 13.5 },
-          { id: "0104", name: "饭", price: 15.0 },
-          { id: "0105", name: "鸭肉饭", price: 9.0 },
-          { id: "0106", name: "青蛙饭", price: 11.0 },
-          { id: "0107", name: "鸽子饭", price: 21.5 },
-          { id: "0108", name: "煲仔饭", price: 16.0 },
-        ]
-      },
-      {
-        vid: "06", name: "欧包", thing: [
-          { id: "0101", name: "嗯嗯", price: 15.0 },
-          { id: "0102", name: "食物", price: 13.0 },
-          { id: "0103", name: "鸡肉的饭", price: 13.5 },
-          { id: "0104", name: "牛肉饭", price: 15.0 },
-          { id: "0105", name: "鸭肉饭", price: 9.0 },
-          { id: "0106", name: "青蛙饭", price: 11.0 },
-          { id: "0107", name: "鸽子饭", price: 21.5 },
-          { id: "0108", name: "煲仔饭", price: 16.0 },
-        ]
-      },
-      {
-        vid: "07", name: "便当", thing: [
-          { id: "0101", name: "青蛙", price: 15.0 },
-          { id: "0102", name: "个人", price: 13.0 },
-          { id: "0103", name: "鸡肉饭", price: 13.5 },
-          { id: "0104", name: "哈哈就", price: 15.0 },
-          { id: "0105", name: "鸭肉饭", price: 9.0 },
-          { id: "0106", name: "青蛙饭", price: 11.0 },
-          { id: "0107", name: "鸽子饭", price: 21.5 },
-          { id: "0108", name: "煲仔饭", price: 16.0 },
-        ]
-      },
-    ],
+    things:[],
     shopbag:[],
     v1top:0,
     v2top: 0,
@@ -148,7 +65,7 @@ Page({
      query.select('#v04').boundingClientRect() 
      query.select('#v05').boundingClientRect() 
      query.select('#v06').boundingClientRect() 
-     query.select('#v07').boundingClientRect() 
+     
 
      query.select('#outside').boundingClientRect();
      query.selectViewport().scrollOffset()  ; 
@@ -179,9 +96,10 @@ Page({
    var obj = { id: e.target.dataset.id, name: e.target.dataset.name, qty: 1, price: e.target.dataset.price,}
    var ctr;
    var bag = this.data.shopbag
+   console.log(e.target.dataset)
    if(this.data.shopbag.length>0){
      for(var elem of bag){
-       if(elem.id==e.target.dataset.id){
+       if(elem.name==e.target.dataset.name){
          elem.qty+=1;
          console.log(bag)
          ctr=1;
@@ -207,11 +125,20 @@ Page({
     count:ncount
   })
  },
+//  去结算
+ goPay(){
+   wx.switchTab({
+     
+     url: '/pages/gte-form/gte-form01',
+   })
+
+ },
+ //查询节点高度
  qtyCtrldown(e) {
    var bag = this.data.shopbag
    if(this.data.shopbag.length>0){
      bag.forEach((elem,i)=>{
-       if(elem.id==e.target.dataset.id){
+       if(elem.name==e.target.dataset.name){
          if(elem.qty>1){
            elem.qty-=1
            console.log(this.data.shopbag)
@@ -257,21 +184,40 @@ Page({
     this.setData({
        chose: "05",
      })
-   } else if (scrolltop >= this.data.v6top && scrolltop <= this.data.v7top) {
+   } else if (scrolltop >= this.data.v6top) {
      this.setData({
        chose: "06",
      })
-   } else if ( scrolltop >= this.data.v7top) {
-     this.setData({
-       chose: "07",
-     })
    };
  },
-  /**
+ 
+  showPros(){
+  
+      db.collection("pros").get().then(res => {
+        console.log(res.data)
+        this.setData({
+          pros: res.data
+        })
+      })
+  },
+   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getHeight();
+      new Promise(open=>{
+        this.showPros()
+        console.log(1)
+        open()
+      }).then(res=>{
+        this.getHeight();
+        console.log(2)
+      }).then(res=>{
+        setTimeout(()=>{
+          this.query() 
+        console.log(3)
+        },2000)
+        
+      })
   },
 
   /**
@@ -279,7 +225,7 @@ Page({
    */
   onReady: function () {
     // 获取节点信息最好延迟获取
-    this.query()
+    
   },
 
   /**

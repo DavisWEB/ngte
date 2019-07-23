@@ -1,0 +1,33 @@
+<!--pages/gte-iphone/gte-iphone.wxml-->
+  <view class="container">
+     <!-- 分割线 -->
+     <view class="divLine"></view>
+  </view>
+<van-cell-group>
+  <van-field
+  class="tip"
+    value="{{ username }}"
+    required
+    clearable
+    label="手机号码"
+    icon="question-o"
+    placeholder="请输入手机号码"
+    bind:click-icon="onClickIcon"
+  />
+</van-cell-group>
+<van-cell-group>
+  <van-field
+    value="{{ sms }}"
+    center
+    clearable
+    label="短信验证码"
+    placeholder="请输入短信验证码"
+    border="{{ false }}"
+    use-button-slot
+  >
+    <van-button slot="button" size="small" type="primary">发送验证码</van-button>
+  </van-field>
+</van-cell-group>
+<view class='yes'>
+<text>确认</text>
+</view>
