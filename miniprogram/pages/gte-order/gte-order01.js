@@ -93,7 +93,7 @@ Page({
  
  //商品数量-加入购物车控制
  qtyCtrlup(e){ 
-   var obj = { id: e.target.dataset.id, name: e.target.dataset.name, qty: 1, price: e.target.dataset.price,}
+   var obj = {  name: e.target.dataset.name, qty: 1, price: e.target.dataset.price,}
    var ctr;
    var bag = this.data.shopbag
    console.log(e.target.dataset)
@@ -127,6 +127,17 @@ Page({
  },
 //  去结算
  goPay(){
+   console.log(this.data.shopbag)
+   var f_id=Math.floor(Math.random()*9999);
+   var data=this.data.shopbag
+   db.collection("form-1").add({
+     data:{
+       f_id:f_id,
+       datas:data,
+       uid:1,
+       status:0
+     }
+   })
    wx.switchTab({
      url: '/pages/gte-form/gte-form01',
    })
