@@ -1,23 +1,23 @@
 <!--pages/gte-mine/gte-mine01.wxml-->
 <view class='login'>
-   <view class='Size'>点击显示头像昵称</view>
+   <open-data type="userNickName" class="username"></open-data>
    <view class='Images'>
-   <image src="../../images/mine_slices/插入.png"/>
+      <open-data type="userAvatarUrl" class="myimg"></open-data>
    </view>
 </view>
 <view class='login1'>
   <view>
      <view class='cm'>
-       <input type='text' placeholder='未知' maxlength="3"></input>
+       <input type='text' placeholder='{{height?height:"未知"}}' maxlength="3" onblur="changeH"></input>
        <view class='cm1'>身高/cm</view>
      </view>
      <view class='cm'>
-       <input type='text' placeholder='未知' maxlength="3"></input>
+       <input type='text' placeholder='{{weight?weight:"未知"}}' value="" maxlength="3" onblur="changeW"></input>
        <view class='kg'>体重/Kg</view>
      </view>
      <view class='cm'>
-       <input type='text' placeholder='未知' maxlength="3"></input>
-       <view class='bai'>体脂率/%</view>
+       <input type='text' placeholder="{{bmi}}"  maxlength="3" disabled></input>
+       <view class='bai'>身体质量BMI</view>
      </view>
   </view>
 </view>
@@ -31,7 +31,7 @@
         <image src="../../images/mine_slices/付费.png"/>
       </view>
        <view class='Size_my'>我的钱包</view>
-          <view class='My_money'>￥2000.00</view>
+          <view class='My_money'>￥{{cash}}</view>
         <view>
            <image src='../../images/mine_slices/enter.png' class='Images_2'></image>
         </view>

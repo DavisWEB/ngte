@@ -1,0 +1,7 @@
+<!--pages/gte/login.wxml-->
+<view class="header">
+<image src="../../images/timg.jpeg"></image></view>
+<view class="title">JUMP的店铺</view>
+
+<button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权登录</button>
+<view wx:else class="exit">请升级微信版本</view>

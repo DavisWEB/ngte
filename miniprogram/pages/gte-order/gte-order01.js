@@ -6,6 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    openid: "",
     pros: [],
     chose:'01',
     intoview:"v01",
@@ -233,8 +234,7 @@ Page({
       setTimeout(()=>{
         this.query()
         console.log(3)
-      },500)
-     
+      },1000)
       res()
     })
   },
@@ -243,8 +243,18 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that=this;
+    wx.getStorage({
+      key: 'openID',
+      success: function (res) {
+        that.setData({
+          openid: res.data.openID
+        })
+      },
+    })
     
-    this.one().then(this.two).then(this.three)
+    this.one().then(this.two).then(this.three);
+    console.log(999)
       // new Promise(open=>{
       //   this.showPros()
       //   console.log(1)

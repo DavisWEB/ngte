@@ -1,6 +1,6 @@
 <!--pages/gte-money/gte-money.wxml-->
 <view class='Muu'>
-  <view class="Money">￥2700.00</view>
+  <view class="Money">￥{{cash}}</view>
   <view class=" balance">我的余额</view>
 </view>
 <view class='liat'>
