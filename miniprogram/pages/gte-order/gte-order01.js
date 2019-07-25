@@ -129,13 +129,15 @@ Page({
  goPay(){
    console.log(this.data.shopbag)
    var f_id=Math.floor(Math.random()*9999);
-   var data=this.data.shopbag
+   var data=this.data.shopbag;
+   var day = new Date().toLocaleDateString()
    db.collection("form-1").add({
      data:{
        f_id:f_id,
        datas:data,
        uid:1,
-       status:0
+       status:0,
+       date:day
      }
    })
    wx.switchTab({
@@ -204,6 +206,7 @@ Page({
   showPros(){
       db.collection("pros").get().then(res => {
         console.log(res.data)
+        console.log(11)
         this.setData({
           pros: res.data
         })
@@ -240,6 +243,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    
     this.one().then(this.two).then(this.three)
       // new Promise(open=>{
       //   this.showPros()
