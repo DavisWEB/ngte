@@ -128,6 +128,7 @@ Page({
  },
 //  去结算
  goPay(){
+   var that=this;
    console.log(this.data.shopbag)
    var f_id=Math.floor(Math.random()*9999);
    var data=this.data.shopbag;
@@ -136,7 +137,7 @@ Page({
      data:{
        f_id:f_id,
        datas:data,
-       uid:1,
+       uid:that.data.openid,
        status:0,
        date:day
      }

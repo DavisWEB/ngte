@@ -54,7 +54,8 @@ Page({
                     _openid: res.data.openid,
                     cash:0,
                     height:170,
-                    weight:70
+                    weight:70,
+                    vip:0
                   }
                 })
                 console.log("插入新的用户信息")
