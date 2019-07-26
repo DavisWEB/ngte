@@ -1,2 +1,25 @@
 <!--pages/gte-index/gte-index01.wxml-->
- <text> this is index </text>
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}"    interval="{{interval}}" duration="{{duration}}"circular="true" indicator-color="{{indicatorCo}}" indicator-active-color="{{indicatoraAC}}">  
+  <block wx:for="{{imgUrls}}" wx:key="index">  
+    <swiper-item>  
+      <navigator url="{{item.link}}" hover-class="navigator-hover">  
+        <image src="{{item.url}}" class="slide-image" class='img'/>  
+      </navigator>  
+    </swiper-item>  
+  </block>  
+ </swiper>
+<van-notice-bar
+  mode="closeable"
+  text="新店开业，全场菜品九折（酒水饮品除外）！欢迎各位食客前品尝并谢绝自带酒水饮料，以示公告，您的捧场是对我们最大的支持"
+/>
+ <view class='tip' wx:for="{{tips}}" wx:key="index">
+  <view class='tip-fl'>
+    <text class='tip-title' bindtap="jump">{{item.title}}</text>
+    <text class='tip-font' bindtap="jumpv">{{item.font}}</text>
+  </view>
+  <view class='tip-fr'>
+    <image src='{{item.images}}'/>
+  </view>
+ </view> 
+
+

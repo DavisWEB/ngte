@@ -1,0 +1,34 @@
+<!--pages/gte-form-pwd/gte-form-pwd.wxml-->
+<view class='head' bindtap='code'>
+  <view class='num'>{{num}}</view>
+  <view class='code'>取餐码</view>
+</view>
+<view id="title">
+  <text class="title">福威文聪JUMP的店铺</text>
+  <image src='../../images/call_slices/arrow.png' class="arrow"></image>
+  <view class="way">广州市越秀区侨光路华厦大厦7楼</view>
+</view>
+<view class='order'>
+  <text>订单号：{{list.f_id}}</text>
+  <text>{{list.date}}</text>
+</view>
+
+<view class='footer'>
+<view  wx:for="{{list.datas}}" wx:key="index">
+  <view class='first'>
+    <text>{{item.name}}</text>
+    <text>￥ <text>{{item.price}}</text></text>
+  </view>
+  <view class='second'>
+    <text>{{item.more}}</text>
+    <text>X {{item.qty}}</text>
+  </view>
+  </view>
+  <view class='third'>
+    <view class='t-total'>
+      <text>合计</text>
+      <text class='t-sum'>￥ <text>{{list.total}}</text></text>
+    </view>
+  </view>
+  </view>
+ 

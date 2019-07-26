@@ -1,0 +1,50 @@
+<!--pages/gte-form-s/gte-form-s.wxml-->
+<view class='list' wx:for="{{list}}" wx:key="index" bindtap='loadMore'>
+  <view class='head'>
+    <text class="title">福威文聪JUMP的店铺</text>
+    <text class='state'>待支付</text>
+  </view>
+  <view wx:for="{{item.datas}}" wx:key="index">
+  <view class='first'>
+    <text>{{item.name}}</text>
+    <text>￥ <text>{{item.price}}</text></text>
+  </view>
+  <view class='second'>
+    <text>{{item.more}}</text>
+    <text>X {{item.qty}}</text>
+  </view>
+  </view>
+  <view class='third'>
+    <view class='t-total'>
+      <text>合计</text>
+      <text class='t-sum'>￥ <text>{{item.total}}</text></text>
+    </view>
+    <view class='btn'>
+      <navigator class='cancel' data-id="{{item._id}}" bindtap="deleteid">取消订单</navigator>
+      <navigator class='play' data-id="{{item._id}}" data-fid="{{item.f_id}}" bindtap='showInputLayer'>立即支付</navigator>
+    </view>
+  </view>
+  </view>
+
+<!-- 支付 -->
+<view hidden="{{hiddenName}}">
+  <view wx:if='{{showPayPwdInput}}'>
+    <view class='bg_layer'></view>
+    <view class='input_main'>
+        <view class='input_title'>
+            <view class='input_back' catchtap='hidePayLayer'><text></text></view>
+            <text>输入支付密码</text>
+        </view>
+        <view class='input_tip'><text>使用会员卡余额支付需要验证身份，验证通过后才可进行支付。</text></view>
+        <view class='input_row' catchtap='getFocus'>
+            <view class='pwd_item' wx:for='{{6}}' wx:key='item' wx:for-index='i'>
+                <text wx:if='{{pwdVal.length>i}}'></text>
+            </view>
+        </view>
+        <view class='forget_pwd' catchtap='hidePayLayer'>忘记密码</view>
+        <input class='input_control' password type='number' focus='{{payFocus}}' bindinput='inputPwd' maxlength='6'/>
+    </view>
+</view>
+</view>
+
+

@@ -96,7 +96,7 @@ Page({
   },
   jump(){
     wx.switchTab({
-      url: '/pages/gte-mine/gte-mine01',
+      url: '/pages/gte-index/gte-index01',
     })
   },
   /**

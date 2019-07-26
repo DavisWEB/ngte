@@ -130,20 +130,27 @@ Page({
  goPay(){
    var that=this;
    console.log(this.data.shopbag)
-   var f_id=Math.floor(Math.random()*9999);
+   var f_id=Math.floor(Math.random()*999999);
    var data=this.data.shopbag;
    var day = new Date().toLocaleDateString()
+   var sum = this.data.count;
    db.collection("form-1").add({
      data:{
        f_id:f_id,
        datas:data,
        uid:that.data.openid,
        status:0,
-       date:day
-     }
+       date:day,
+       total: sum,
+       uid: that.data.openid
+        }
    })
-   wx.switchTab({
-     url: '/pages/gte-form/gte-form01',
+   wx.setStorage({
+     key: 'num',
+     data: f_id,
+   })
+   wx.navigateTo({
+     url: '/pages/gte-form-s/gte-form-s?uid='+this.data.openid,
    })
 
  },
@@ -248,6 +255,7 @@ Page({
     wx.getStorage({
       key: 'openID',
       success: function (res) {
+       
         that.setData({
           openid: res.data.openID
         })
@@ -255,7 +263,7 @@ Page({
     })
     
     this.one().then(this.two).then(this.three);
-    console.log(999)
+   
       // new Promise(open=>{
       //   this.showPros()
       //   console.log(1)

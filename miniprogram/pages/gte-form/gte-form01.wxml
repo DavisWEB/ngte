@@ -1,2 +1,30 @@
 <!--pages/gte-form/gte-form01.wxml-->
-<text>pages/gte-form/gte-form01.wxml</text>
+<!-- <view bindtap='addp'>添加</view> -->
+<!-- <view bindtap='loadMore'>查询</view> -->
+<view class='list' wx:for="{{list}}" wx:key="index" bindtap='loadMore'>
+  <view class='head'>
+    <text class="title">福威文聪JUMP的店铺</text>
+    <text class='state'>{{item.status==0?"待支付":item.status==1?"待出餐":item.status==2?"订单已完成":"订单已取消"}}</text>
+  </view>
+  <view wx:for="{{item.datas}}" wx:key="index">
+  <view class='first'>
+    <text>{{item.name}}</text>
+    <text>￥ <text>{{item.price}}</text></text>
+  </view>
+  <view class='second'>
+    <text>{{item.more}}</text>
+    <text>X {{item.qty}}</text>
+  </view>
+  </view>
+  <view class='third'>
+    <view class='t-total'>
+      <text>消费</text>
+      <text class='t-sum'>￥ <text>{{item.total}}</text></text>
+    </view>
+    <view class='btn'>
+    <navigator class='cancel' data-id="{{item._id}}" bindtap="deleteid">删除</navigator>
+      <navigator class='play' bindtap="gopay" data-status="{{item.status}}">{{item.status==0?"去支付":item.status==1?"请等待出餐":item.status==2?"再来一单":"再来一单"}}</navigator>
+    </view>
+  </view>
+  </view>
+  

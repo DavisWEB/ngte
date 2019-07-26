@@ -1,0 +1,71 @@
+/* pages/gte-form-pwd/gte-form-pwd.wxss */
+.head{
+  padding: 20rpx;
+  margin-top: 20rpx;
+}
+.head .num{
+  font-size: 50rpx;
+  color: #0da862;
+  text-align: center;
+  font-weight: 500;
+}
+.head .code{
+  font-size: 28rpx;
+  color: #333;
+  text-align: center;
+  margin-top: 10rpx;
+}
+/* 标题 */
+ #title{
+  padding: 20rpx;
+  border-top:7rpx solid #f3f3f3; 
+  border-bottom:7rpx solid #f3f3f3; 
+} 
+text.title{
+  font-size: 36rpx;
+  margin-bottom: 10rpx;
+  color:rgba(0, 0, 0, 0.699)
+}
+view.way{
+  color:rgba(170, 175, 174, 0.829);
+  font-size: 28rpx;
+}
+image.arrow{
+  width:30rpx;
+  height:30rpx;
+}
+.order,.first,.second{
+  justify-content: space-between;
+  display: flex;
+}
+.order{
+  padding: 20rpx;
+  font-size: 30rpx;
+  color: #999;
+  border-bottom: 4rpx solid #f3f3f3;
+}
+.first{
+  padding-top: 20rpx;
+  font-size: 32rpx;
+}
+.second{
+  font-size: 26rpx;
+  padding-top: 10rpx;
+  color: #999;
+}
+.footer{
+  padding: 20rpx;
+}
+.third{
+  justify-content: flex-end; 
+  display: flex;
+  padding-top: 20rpx;
+  font-size: 30rpx;
+  border-top: 3rpx solid #f1f1f1;
+  margin-top: 20rpx;
+}
+.third .t-total .t-sum{
+  color:#0da862;
+  font-weight: bold;
+  font-size: 32rpx;
+}

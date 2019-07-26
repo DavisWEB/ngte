@@ -1,1 +1,39 @@
 /* pages/gte-index/gte-index01.wxss */
+swiper{
+  display: flex;
+  height: 300rpx;
+}
+.img{
+  width: 750rpx;
+  height: 300rpx
+}
+/* 小提示 */
+.tip{
+  display: flex;
+  padding: 0 30rpx;
+  justify-content: space-between;
+  position: relative;
+}
+.tip-fl{
+  padding-top:10rpx; 
+}
+.tip-fr{
+  padding-top:15rpx;
+}
+
+.tip-title{
+  font-size: 32rpx;
+  color: #000;
+  font-weight: 500;
+}
+.tip-font{
+  font-size: 20rpx;
+  color: #999;
+  position: absolute;
+  top:55%;
+  left: 4%;
+}
+.tip-fr>image{
+  width: 80rpx;
+  height: 80rpx;
+}
